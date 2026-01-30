@@ -1,0 +1,72 @@
+:root {
+    --primary: #6c5ce7;
+    --success: #00b894;
+    --error: #d63031;
+}
+
+body {
+    margin: 0; font-family: 'Poppins', sans-serif;
+    background: #dfe6e9; display: flex; justify-content: center; align-items: center;
+    height: 100vh; overflow: hidden;
+}
+
+.game-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3.5rem;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.game-title-mini {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.8rem;
+    color: var(--primary);
+    margin: 0 0 10px 0;
+}
+
+.screen {
+    background: white; padding: 2rem; border-radius: 30px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    text-align: center; width: 480px; min-height: 500px;
+    position: relative;
+}
+
+/* Posicionamento superior direito para vidas e pontos */
+.top-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.lives-container {
+    display: flex;
+    gap: 5px;
+}
+
+.life-img {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+}
+
+.score { font-weight: 800; font-size: 1.1rem; color: #444; }
+
+.timer-wrapper { width: 100%; height: 10px; background: #eee; border-radius: 5px; margin-bottom: 15px; overflow: hidden; }
+#timer-bar { width: 100%; height: 100%; background: var(--success); }
+
+.badge { padding: 5px 15px; border-radius: 20px; background: #f0f0f0; font-size: 0.7rem; font-weight: 800; color: #666; display: inline-block; }
+
+#question { font-size: 1.2rem; margin: 20px 0; min-height: 70px; display: flex; align-items: center; justify-content: center; }
+
+.inputs-container { display: flex; justify-content: center; gap: 8px; }
+.digit-input { width: 42px; height: 55px; font-size: 1.8rem; text-align: center; border: 3px solid #ddd; border-radius: 10px; outline: none; }
+
+.hidden { display: none !important; }
+
+/* Loader */
+.loader-bar { width: 100%; height: 10px; background: #eee; border-radius: 10px; overflow: hidden; }
+#load-progress { width: 0%; height: 100%; background: var(--primary); }
+
+.anim-error { animation: shake 0.4s; border-color: var(--error) !important; }
+@keyframes shake { 0%,100%{transform:translateX(0)} 25%{transform:translateX(-5px)} 75%{transform:translateX(5px)} }

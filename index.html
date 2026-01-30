@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gênio Matemático</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="app">
+        <div id="start-screen" class="screen">
+            <h1 class="game-title">Gênio Matemático</h1>
+            <div id="ranking-container" class="hidden">
+                <div id="photo-winner"></div>
+                <p class="highscore-text">Recordista: <span id="high-score-val">0</span> pts</p>
+            </div>
+            <div id="loader-section">
+                <p>Carregando Desafios...</p>
+                <div class="loader-bar"><div id="load-progress"></div></div>
+            </div>
+        </div>
+
+        <div id="game-screen" class="screen hidden">
+            <h1 class="game-title-mini">Gênio Matemático</h1>
+            <div class="top-info">
+                <div class="score">Pontos: <span id="current-score">0</span></div>
+                <div id="lives-display" class="lives-container"></div>
+            </div>
+            
+            <div class="timer-wrapper">
+                <div id="timer-bar"></div>
+            </div>
+            <div id="badge" class="badge"></div>
+            <div id="question"></div>
+            <div id="inputs-container" class="inputs-container"></div>
+        </div>
+
+        <div id="game-over-screen" class="screen hidden">
+            <h1 class="error-text">FIM DE JOGO!</h1>
+            <p>Pontuação: <span id="final-score">0</span></p>
+            <div id="new-record-msg" class="hidden">🎉 NOVO RECORDE! 🎉</div>
+            <p>Reiniciando em <span id="return-timer">6</span>s...</p>
+        </div>
+
+        <video id="webcam" autoplay playsinline class="hidden" width="300" height="225"></video>
+        <canvas id="canvas" class="hidden" width="300" height="225"></canvas>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
