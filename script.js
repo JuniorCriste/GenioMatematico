@@ -210,7 +210,7 @@ function checkAttempt() {
     
     if (val.length === currentAnswer.length) {
         if (val === currentAnswer) {
-            score += (totalTime > 60 ? 50 : 10);
+            score += (totalTime > 60 ? 15 : 10);
             updateUI();
             playSound(600, 0.1);
             setTimeout(nextQuestion, 400);
