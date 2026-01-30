@@ -82,10 +82,25 @@ body {
     line-height: 1.2;
 }
 
+/* Estilo dos quadradinhos de dígito estilo Post-it */
 .digit-input { 
+    
     width: 45px; height: 60px; font-size: 2rem; text-align: center; 
-    border: none; border-bottom: 2px solid #333; background: transparent; 
+    border: none; border-bottom: 2px solid #333; background: transparent;
     outline: none; font-family: 'Gochi Hand', cursive;
+}
+
+/* Efeito de foco quando o aluno está digitando naquele quadrado */
+.digit-input:focus {
+    border-color: var(--text);
+    transform: scale(1.05); /* Leve aumento para indicar onde está o cursor */
+}
+
+/* Quando houver erro, os quadradinhos ficam vermelhos */
+.digit-input.anim-error { 
+    border-color: var(--error) !important;
+    background: rgba(214, 48, 49, 0.1);
+    color: var(--error);
 }
 
 .hidden { display: none !important; }
