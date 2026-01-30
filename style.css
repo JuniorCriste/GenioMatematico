@@ -128,5 +128,23 @@ body {
 
 .game-title-mini  {text-align: center;}
 
+.shortcut {
+    margin-top: 40px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #242424;
+    text-align: center;
+    opacity: 0.8;
+}
+
+footer {
+    font-size: 13px;
+    color: #535353;
+    text-align: center;
+    opacity: 0.6;
+}
+
 @keyframes shake { 0%,100%{transform: translateX(0) rotate(1deg)} 25%{transform: translateX(-5px) rotate(1deg)} 75%{transform: translateX(5px) rotate(1deg)} }
 .anim-error { animation: shake 0.4s; color: red !important; }

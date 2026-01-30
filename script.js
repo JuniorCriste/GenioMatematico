@@ -310,3 +310,30 @@ function playSound(freq, duration) {
         osc.stop(ctx.currentTime + duration);
     } catch (e) { /* AudioContext bloqueado pelo navegador */ }
 }
+
+// Objeto para rastrear quais teclas estão pressionadas
+const teclasPressionadas = {
+    '1': false,
+    '2': false,
+    '3': false
+};
+
+// Escuta quando uma tecla é pressionada
+window.addEventListener('keydown', (event) => {
+    if (event.key in teclasPressionadas) {
+        teclasPressionadas[event.key] = true;
+
+        // Verifica se todas as três teclas de atalho estão ativas
+        if (teclasPressionadas['1'] && teclasPressionadas['2'] && teclasPressionadas['3']) {
+            // Redireciona para o Painel José Teixeira Fialho
+            window.location.href = "https://juniorcriste.github.io/PainelJTF/";
+        }
+    }
+});
+
+// Escuta quando uma tecla é solta para resetar o estado
+window.addEventListener('keyup', (event) => {
+    if (event.key in teclasPressionadas) {
+        teclasPressionadas[event.key] = false;
+    }
+});
