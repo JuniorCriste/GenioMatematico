@@ -82,6 +82,14 @@ body {
     line-height: 1.2;
 }
 
+#game-over-screen { 
+    font-family: 'Gochi Hand', cursive;
+    font-size: 1.6rem; margin: 20px 0; min-height: 80px; 
+    display: flex; align-items: center; justify-content: center;
+    line-height: 1.2;
+}
+
+
 /* Estilo dos quadradinhos de dígito estilo Post-it */
 .digit-input { 
     
@@ -93,7 +101,7 @@ body {
 /* Efeito de foco quando o aluno está digitando naquele quadrado */
 .digit-input:focus {
     border-color: var(--text);
-    transform: scale(1.05); /* Leve aumento para indicar onde está o cursor */
+    transform: scale(1.03); /* Leve aumento para indicar onde está o cursor */
 }
 
 /* Quando houver erro, os quadradinhos ficam vermelhos */
@@ -111,10 +119,14 @@ body {
 
 /* Estilo da Foto do Recordista */
 #photo-winner img { 
-    width: 130px; height: 130px; border: 2px solid #333; 
+    width: 240px; height: 200px; border: 2px solid #333; 
     padding: 5px; background: white; transform: rotate(-3deg);
     box-shadow: 3px 3px 10px rgba(0,0,0,0.1);
 }
+#photo-winner {text-align: center;}
+.highscore-text {text-align: center;}
+
+.game-title-mini  {text-align: center;}
 
 @keyframes shake { 0%,100%{transform: translateX(0) rotate(1deg)} 25%{transform: translateX(-5px) rotate(1deg)} 75%{transform: translateX(5px) rotate(1deg)} }
 .anim-error { animation: shake 0.4s; color: red !important; }
