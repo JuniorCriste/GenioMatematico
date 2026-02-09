@@ -1,5 +1,5 @@
-##Gênio Matemático
-####Junior Criste
+## Gênio Matemático
+#### Junior Criste
 
 <img src="img/prints/Genio%20Matematico.png">
 ##### Ranking de melhor jogador
